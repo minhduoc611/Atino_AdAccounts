@@ -39,8 +39,9 @@ jobs:
         DATASET_ID: ${{ secrets.DATASET_ID }}
         TABLE_ID: ${{ secrets.TABLE_ID }}
         ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
-      run: python sync_fb_ads.py
+      run: python ad_accounts.py
       
     - name: Cleanup
       if: always()
       run: rm -f application_default_credentials.json
+
